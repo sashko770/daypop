@@ -1,0 +1,10 @@
+{
+  "name": "Remix Remix Remix DayPop - מתכנן משימות אינטראקטיבי ושמח",
+  "description": "מתכנן משימות עליז ומלא חיים עם עוזר קולי חכם מבוסס AI, תצוגת יום ושבוע, אנימציות קופצניות ואפקטי קונפטי",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

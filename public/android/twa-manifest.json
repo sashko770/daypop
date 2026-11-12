@@ -1,0 +1,28 @@
+{
+  "packageId": "com.daypop.app",
+  "host": "ais-dev-dmybieuvg4j62btwrzs4bv-354100208117.europe-west2.run.app",
+  "name": "DayPop - מתכנן משימות אינטראקטיבי ושמח",
+  "launcherName": "DayPop",
+  "themeColor": "#F59E0B",
+  "navigationColor": "#FFFBEB",
+  "backgroundColor": "#FFFBEB",
+  "enableNotifications": true,
+  "startUrl": "/",
+  "iconUrl": "https://ais-dev-dmybieuvg4j62btwrzs4bv-354100208117.europe-west2.run.app/pwa-512x512.png",
+  "maskableIconUrl": "https://ais-dev-dmybieuvg4j62btwrzs4bv-354100208117.europe-west2.run.app/pwa-maskable-512x512.png",
+  "appVersionName": "1.0.0",
+  "appVersionCode": 1,
+  "shortcuts": [
+    {
+      "name": "משימה חדשה",
+      "shortName": "הוספה",
+      "url": "/?action=new-task",
+      "icon": "https://ais-dev-dmybieuvg4j62btwrzs4bv-354100208117.europe-west2.run.app/pwa-192x192.png"
+    }
+  ],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://ais-dev-dmybieuvg4j62btwrzs4bv-354100208117.europe-west2.run.app/manifest.webmanifest",
+  "fallbackType": "customtabs",
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false
+}

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        // Intercept console.error for sandbox Vite HMR WebSocket notices
+        const origConsoleError = console.error;
+        console.error = function (...args) {
+          const msg = args
+            .map((a) => (a && (a.message || a.stack) ? a.message + ' ' + a.stack : String(a)))
+            .join(' ');
+          if (
+            msg.includes('WebSocket') ||
+            msg.includes('ws://') ||
+            msg.includes('wss://') ||
+            msg.includes('[vite]') ||
+            msg.includes('closed without opened')
+          ) {
+            return;
+          }
+          origConsoleError.apply(console, args);
+        };
+
+        // Gracefully ignore sandbox Vite HMR WebSocket errors
+        window.addEventListener(
+          'error',
+          function (e) {
+            const msg = (e && (e.message || (e.error && e.error.message))) || '';
+            if (
+              msg.includes('WebSocket') ||
+              msg.includes('ws://') ||
+              msg.includes('wss://') ||
+              msg.includes('closed without opened')
+            ) {
+              e.stopImmediatePropagation();
+              e.preventDefault();
+              return true;
+            }
+          },
+          true
+        );
+
+        window.addEventListener(
+          'unhandledrejection',
+          function (e) {
+            const reasonStr =
+              (e && e.reason && (e.reason.message || e.reason.stack || String(e.reason))) || '';
+            if (
+              reasonStr.includes('WebSocket') ||
+              reasonStr.includes('closed without opened') ||
+              reasonStr.includes('ws://') ||
+              reasonStr.includes('wss://')
+            ) {
+              e.stopImmediatePropagation();
+              e.preventDefault();
+              return true;
+            }
+          },
+          true
+        );
+      })();
+    </script>
+    <title>DayPop - מתכנן משימות אינטראקטיבי ושמח</title>
+    <meta name="description" content="מתכנן משימות עליז ומלא חיים עם עוזר קולי חכם מבוסס AI, תצוגת יום ושבוע, אנימציות קופצניות ואפקטי קונפטי" />
+    <meta property="og:title" content="DayPop - מתכנן משימות אינטראקטיבי ושמח" />
+    <meta property="og:description" content="מתכנן משימות עליז ומלא חיים עם עוזר קולי חכם מבוסס AI, תצוגת יום ושבוע, אנימציות קופצניות ואפקטי קונפטי" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#f59e0b" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="DayPop" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-amber-50/40 text-slate-800 antialiased selection:bg-amber-300 selection:text-amber-950 font-['Rubik',sans-serif]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

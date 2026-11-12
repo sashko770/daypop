@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.daypop.app",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0F:52:EA:CB:25:4B:E5:92:0E:0F:35:48:B0:0E:4D:43:F1:66:8F:92:0A:CD:34:49:1F:B1:00:26"
+      ]
+    }
+  }
+]

@@ -1,0 +1,49 @@
+{
+  "id": "/",
+  "name": "DayPop - מתכנן משימות אינטראקטיבי ושמח",
+  "short_name": "DayPop",
+  "description": "מתכנן משימות עליז ומלא חיים עם עוזר קולי חכם מבוסס AI, תצוגת יום ושבוע, אנימציות קופצניות ואפקטי קונפטי",
+  "lang": "he",
+  "dir": "rtl",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#f59e0b",
+  "background_color": "#fffbeb",
+  "categories": ["productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "משימה חדשה",
+      "short_name": "הוספה",
+      "description": "הוסף משימה חדשה במהירות ל-DayPop",
+      "url": "/?action=new-task",
+      "icons": [
+        {
+          "src": "/pwa-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}
