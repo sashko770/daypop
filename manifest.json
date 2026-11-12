@@ -1,37 +1,18 @@
 {
-  "background_color": "#ffffff",
-  "description": "מתכנן משימות עליז ומלא חיים עם עוזר קולי חכם מבוסס AI, תצוגת יום ושבוע, אנימציות קופצניות ואפקטי קונפטי",
-  "dir": "ltr",
-  "display": "standalone",
   "name": "DayPop Task Planner",
-  "orientation": "any",
-  "scope": "/",
   "short_name": "DayPop",
+  "description": "A vibrant and dynamic daily and weekly task planner.",
   "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
   "theme_color": "#f59e0b",
+  "orientation": "any",
   "icons": [
     {
-      "src": "https://sashko770.github.io/icon.svg",
-      "type": "image/svg+xml",
-      "isSquare": false,
-      "isPng": false,
-      "isWebp": false,
-      "isJpg": false,
-      "width": 0,
-      "is512x512": false,
-      "is256x256": false,
-      "is192x192": false
-    },
-    {
-      "src": "https://sashko770.github.io/apple-touch-icon.png",
-      "isSquare": false,
-      "isPng": true,
-      "isWebp": false,
-      "isJpg": false,
-      "width": 0,
-      "is512x512": false,
-      "is256x256": false,
-      "is192x192": false
+      "src": "./launchericon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
